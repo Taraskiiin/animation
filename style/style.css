@@ -104,15 +104,12 @@ body{
         transform: translateX(-150%);
     }
     15% {
-        opacity: .1;
-        transform: translateX(0);
-    }
-    50% {
         opacity: .2;
         transform: translateX(0);
     }
     65% {
-        opacity: .1;
+        opacity: .2;
+        transform: translateX(0);
     }
     100% {
         transform: translateX(-150%);
@@ -147,22 +144,17 @@ body{
     15% {
         opacity: .2;
     }
-    25% {
-        opacity: .1;
-    }
     50% {
         opacity: 0;
         transform: translateX(150%);
-    }
-    55%{
-        opacity: .1;
     }
     65% {
         opacity: .2;
         transform: translateX(0);
     }
     100% {
-        opacity: .2; 
+        opacity: .2;
+        transform: translateX(0); 
     }
 }
 .swords{
@@ -178,6 +170,8 @@ body{
     align-items: center;
     transition: ease .3s;
     cursor: pointer;
+    margin: 48% auto;
+    animation-fill-mode: forwards; 
 }
 .first__sword,
 .second__sword,
@@ -202,18 +196,18 @@ body{
     width: 35px;
     background-color: #333;
 }
-.first{
+.first__sword + .active{
     transition-duration: 0.5s, 0.5s;
     transform: translateY(-70px);
     opacity: 0;
-    animation-fill-mode: forwards;
 }
-.middle{
+.active ~ .second__sword{
     transform: rotate(45deg) translate(-15px, 20px);
     transition-duration: 0.5s, 0.5s;
     animation-fill-mode: forwards; 
+    background-color: red;
 }
-.last{
+.third__sword + .active{
     transform: rotate(-45deg) translate(10px,-40px);
     transition-duration: .5s, 0.5s;
     animation-fill-mode: forwards;

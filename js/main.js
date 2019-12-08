@@ -1,5 +1,4 @@
 $('.swords__block').click(function(){
-    $('.first__sword').toggleClass('first');
-    $('.second__sword').toggleClass('middle');
-    $('.third__sword').toggleClass('last');
+    $(".swords__block").removeClass(".active");
+    $(this).addClass(".active"); 
  });
