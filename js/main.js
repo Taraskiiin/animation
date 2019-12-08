@@ -1,6 +1,5 @@
-$('.swords').click(function(){
+$('.swords__block').click(function(){
     $('.first__sword').toggleClass('first');
     $('.second__sword').toggleClass('middle');
     $('.third__sword').toggleClass('last');
-
-  });
+ });
