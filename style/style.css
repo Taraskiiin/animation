@@ -103,11 +103,11 @@ body{
         opacity: 0;
         transform: translateX(-150%);
     }
-    15% {
+    17% {
         opacity: .2;
         transform: translateX(0);
     }
-    65% {
+    67% {
         opacity: .2;
         transform: translateX(0);
     }
@@ -123,9 +123,6 @@ body{
     15% {
         transform: rotate(0deg) translate(0, 0);
     }
-    25% {
-        transform: rotate(-30deg) translate(150%, -100%);
-    }
     50% {
         transform: rotate(-30deg) translate(150%, -100%);
     }
@@ -137,18 +134,14 @@ body{
     }
 }
 @keyframes shadow-2{
-    0% {
-        opacity: .2;
-        transform: translateX(0);
-    }
-    15% {
+    17% {
         opacity: .2;
     }
-    50% {
+    52% {
         opacity: 0;
         transform: translateX(150%);
     }
-    65% {
+    67% {
         opacity: .2;
         transform: translateX(0);
     }
@@ -204,14 +197,16 @@ body{
 .active:nth-child(2){
     transform: rotate(45deg) translate(-15px, 20px);
     transition-duration: 0.5s, 0.5s;
+    margin-left: 5%;
     animation-fill-mode: forwards; 
 }
 .active:nth-child(3){
     transform: rotate(-45deg) translate(10px,-40px);
     transition-duration: .5s, 0.5s;
+    margin-left: 5%;
     animation-fill-mode: forwards;
 }
-.swords__block:hover ~ .active:nth-child(2).big__block{
+.swords__block:hover + .big__block{
     background-color: red;
 }
 
